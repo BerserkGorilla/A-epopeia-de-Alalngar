@@ -15,8 +15,7 @@ def PuzzleOuro(itens,magias):
     userInput = ""
     Saida = 0
     while True:
-        print("Selecione sua ação (itens, magias, ambiente, concentrar)")
-        userInput = str(str(input()))
+        userInput = str(input("Selecione sua ação (itens, magias, ambiente, concentrar) ")).lower()
         if userInput == "itens":
             if itens != []:
                 print ("Os itens que carrego comigo são:")
@@ -114,7 +113,7 @@ def PunicaoRN(itens,magias):
     time.sleep(0.8)
     while True:
         ex = 0
-        userInput = str(input("Selecione sua ação (itens, magias, ambiente, concentrar) "))
+        userInput = str(input("Selecione sua ação (itens, magias, ambiente, concentrar) ")).lower()
         if userInput == "itens":
             if itens != []:
                 print ("Os itens que carrego comigo são:")
@@ -124,7 +123,7 @@ def PunicaoRN(itens,magias):
                 while True:
                     if ex == 1:
                                 break
-                    userInput = str(input("Selecione um item "))
+                    userInput = str(input("Selecione um item ").lower().title())
                     if userInput not in itens:
                         print("Opcao inválida")
                     elif userInput == "Bloco de metal":
@@ -193,14 +192,14 @@ def PuzzleGelo(itens,magias,Saida):
     while True:
         if ex == 1:
             break
-        userInput = str(input("Selecione sua ação (itens, magias, ambiente, concentrar)"))
+        userInput = str(input("Selecione sua ação (itens, magias, ambiente, concentrar) ")).lower()
         if userInput == "itens":
             if itens != []:
                 print ("Os itens que carrego comigo são:")
                 for m in itens:
                     print(m)
                 while True:
-                    userInput = str(input())
+                    userInput = str(input("Selecione um item ").lower().title())
                     if userInput not in itens:
                         print("Opção Inválida")
                     else:
@@ -266,7 +265,7 @@ def PuzzleElevador(itens, magias):
     print("A sustentacao dessa plataforma é fina")
     while True:
         ex = 0
-        userInput = str(input("Selecione sua ação (itens, magias, ambiente, concentrar) "))
+        userInput = str(input("Selecione sua ação (itens, magias, ambiente, concentrar) ")).lower()
         if userInput == "itens":
             if itens != []:
                 print ("Os itens que carrego comigo são:")
@@ -275,7 +274,8 @@ def PuzzleElevador(itens, magias):
                 while True:
                     if ex == 1:
                             break
-                    userInput = str(input("Selecione um item "))
+                    userInput = str(input("Selecione um item ").lower().title())
+                    print(userInput)
                     if userInput not in itens:
                         print("Opcao inválida")
                     elif userInput.startswith("Espada"):
@@ -314,7 +314,7 @@ def PuzzleElevador(itens, magias):
             print("Opção Inválida")
 
 if __name__ == '__main__':
-    itens = ["Bloco de metal","Espada longa", "Espada curta","Vembrassa"]
+    itens = ["Bloco De Metal","Espada Longa", "Espada Curta","Vembrassa"]
     magias = []
     print("Seja muito bem-vindo, Você está jogando \" A epopeia de Alalngar \".")
     time.sleep(1)
