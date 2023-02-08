@@ -126,17 +126,17 @@ def PunicaoRN(itens,magias):
                     userInput = str(input("Selecione um item ").lower().title())
                     if userInput not in itens:
                         print("Opcao inválida")
-                    elif userInput == "Bloco de metal":
+                    elif userInput == "Bloco De Metal":
                         print("Bom, acho que posso arremessar esse bloco....")
                         #print("Arremessar bloco? (sim/nao)")
                         while True:
                             userInput = str(input("Arremessar bloco? (sim/nao) "))
                             #print('Arremessar bloco',ex)
                             if userInput == "sim":
-                                userInput = str(input("Em qual direcao? (da pedra/contraria)" ))
+                                userInput = str(input("Em qual direcao? (da pedra/contraria) " ))
                                 while True:
                                     if userInput =="da pedra":
-                                        itens.pop(itens.index("Bloco de metal"))
+                                        itens.pop(itens.index("Bloco De Metal"))
                                         print("Você arremessa o bloco na direcao da pedra")
                                         print("Você percebe que a pedra comeca a se afastar ")
                                         print("\'ISSO NÃO PODE ESTAR ACONTECENDO\'")
@@ -336,7 +336,7 @@ if __name__ == '__main__':
     time.sleep(1)
     print("Enfrentar os deuses.")
     time.sleep(1)
-    print("Meshkiangasher, o sacerdote, alertou-lhe")
+    print("Meshkiangasher II, o sacerdote, alertou-lhe")
     print(" \' Isso é uma insanidade! \' ")
     time.sleep(1)
     print("Apesar disso, ele indica o caminho de entrada para o territorio divino")
@@ -353,11 +353,6 @@ if __name__ == '__main__':
         itens = PunicaoRN(itens,magias)
 
     PuzzleGelo(itens,magias,Saida)
-    print("Você caminha ate alcancar uma colina muito alta, nao parece ser possivel escala-lo")
-    time.sleep(1)
-    print("Você esta sobre uma tabua que parece estar presa por uma corda passando por uma roldana no teto")
-    print("Essa corda esta presa a uma pedra que esta sobre uma plataforma muito alta")
-    print("A sustentacao dessa plataforma é fina, e Você conseguiria cortar com sua espada longa ")
     PuzzleElevador(itens,magias)
     time.sleep(1)
     print("A frente é possível ver que o tom verdejante dessa parte da caverna some, dando lugar a paredes de pedra azul brilhante")
